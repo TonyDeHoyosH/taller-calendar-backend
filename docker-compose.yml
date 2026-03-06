@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  calendar-backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: taller-calendar-backend
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    restart: unless-stopped
