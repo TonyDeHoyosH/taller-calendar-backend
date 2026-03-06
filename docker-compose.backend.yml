@@ -1,0 +1,9 @@
+services:
+  backend:
+    build:
+      context: ../taller-calendar-api
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    env_file:
+      - ../taller-calendar-api/.env.local
