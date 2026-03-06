@@ -51,11 +51,11 @@ export class CalendarService {
                     summary: dto.summary,
                     description: dto.description,
                     start: {
-                        dateTime: new Date(dto.start).toISOString(),
+                        dateTime: `${dto.start}:00`,
                         timeZone: 'America/Mexico_City',
                     },
                     end: {
-                        dateTime: new Date(dto.end).toISOString(),
+                        dateTime: `${dto.end}:00`,
                         timeZone: 'America/Mexico_City',
                     },
                 },
@@ -75,13 +75,13 @@ export class CalendarService {
             if (dto.description) requestBody.description = dto.description;
             if (dto.start) {
                 requestBody.start = {
-                    dateTime: new Date(dto.start).toISOString(),
+                    dateTime: `${dto.start}:00`,
                     timeZone: 'America/Mexico_City',
                 };
             }
             if (dto.end) {
                 requestBody.end = {
-                    dateTime: new Date(dto.end).toISOString(),
+                    dateTime: `${dto.end}:00`,
                     timeZone: 'America/Mexico_City',
                 };
             }
