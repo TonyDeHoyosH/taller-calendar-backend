@@ -1,0 +1,15 @@
+# dependencias compiladas
+node_modules/
+dist/
+npm-debug.log*
+
+# archivos de entorno (NUNCA SUBIR A GITHUB)
+.env
+.env.*
+
+# logs y builds
+yarn-error.log*
+yarn-debug.log*
+
+# SO
+.DS_Store
