@@ -19,11 +19,11 @@ export async function PATCH(request: NextRequest) {
                 summary: body.summary,
                 description: body.description,
                 start: {
-                    dateTime: body.start,
+                    dateTime: new Date(body.start).toISOString(),
                     timeZone: 'America/Mexico_City',
                 },
                 end: {
-                    dateTime: body.end,
+                    dateTime: new Date(body.end).toISOString(),
                     timeZone: 'America/Mexico_City',
                 },
             },
